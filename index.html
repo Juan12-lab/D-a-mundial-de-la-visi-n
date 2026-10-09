@@ -111,6 +111,7 @@
     .alert-card h3 { color: var(--navy); font-size: 1.08rem; letter-spacing: -.02em; }
     .alert-card p { color: var(--muted); margin: 8px 0 0; font-size: .93rem; }
     .training { background: linear-gradient(180deg, #f0f9fd 0%, #fff 100%); }
+    .training-top-spacer { display: block; grid-column: 1 / -1; height: 34px; }
     .training-shell { display: grid; grid-template-columns: .75fr 1.25fr; gap: 32px; align-items: start; }
     .training-copy { padding: 22px 0; }
     .training-copy h2 { font-size: clamp(2rem, 3.2vw, 2.8rem); }
@@ -155,6 +156,7 @@
       .intro-grid { gap: 35px; }
       .habits-grid { grid-template-columns: repeat(2, 1fr); }
       .training-shell { grid-template-columns: 1fr; gap: 10px; }
+      .training-top-spacer { height: 24px; }
       .training-copy { max-width: 700px; }
     }
     @media (max-width: 680px) {
@@ -237,7 +239,6 @@
           <p class="hero-copy">Tus ojos te acompañan en cada momento. Aprende a cuidarlos, reconoce las señales de alerta y convierte la salud visual en parte de tu bienestar diario.</p>
           <div class="hero-actions">
             <a class="btn btn-light" href="#habitos">Descubrir cómo cuidarme <span aria-hidden="true">↓</span></a>
-            <a class="btn btn-outline" href="#capacitacion">Ir a la capacitación</a>
           </div>
           <div class="hero-note">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 7.7 7.5 9.5 4.3-1.8 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
@@ -357,6 +358,7 @@
 
     <section class="section training" id="capacitacion">
       <div class="container training-shell">
+        <div class="training-top-spacer" aria-hidden="true"></div>
         <div class="training-copy reveal">
           <span class="kicker">Tu participación cuenta</span>
           <h2>Capacitación y registro de asistencia</h2>
@@ -438,7 +440,7 @@
 
     // FORMULARIO: pega aquí la URL de inserción de Google Forms.
     // Ejemplo: https://docs.google.com/forms/d/e/ID_DE_TU_FORMULARIO/viewform?embedded=true
-    const FORM_EMBED_URL = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScg2yQJuzQbSxQq1IJ1XmjAVGWPmDIKgKLozeTjXQ19LvGksA/viewform?embedded=true" width="640" height="887" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>';
+    const FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScg2yQJuzQbSxQq1IJ1XmjAVGWPmDIKgKLozeTjXQ19LvGksA/viewform?embedded=true';
     if (FORM_EMBED_URL.trim()) {
       const iframe = document.getElementById('googleForm');
       iframe.src = FORM_EMBED_URL.trim();
