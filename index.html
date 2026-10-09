@@ -438,10 +438,10 @@
 
     // FORMULARIO: pega aquí la URL de inserción de Google Forms.
     // Ejemplo: https://docs.google.com/forms/d/e/ID_DE_TU_FORMULARIO/viewform?embedded=true
-    const FORM_EMBED_URL = '';
+    const FORM_EMBED_URL = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScg2yQJuzQbSxQq1IJ1XmjAVGWPmDIKgKLozeTjXQ19LvGksA/viewform?embedded=true" width="640" height="887" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>';
     if (FORM_EMBED_URL.trim()) {
       const iframe = document.getElementById('googleForm');
-      iframe.src = FORM_EMBED_URL.trim(<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScg2yQJuzQbSxQq1IJ1XmjAVGWPmDIKgKLozeTjXQ19LvGksA/viewform?embedded=true" width="640" height="887" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>);
+      iframe.src = FORM_EMBED_URL.trim();
       iframe.hidden = false;
       document.getElementById('formPlaceholder').hidden = true;
     }
